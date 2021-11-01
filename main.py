@@ -9,6 +9,7 @@ app = Flask(__name__)
 # configurating the connection for the socketio
 app.config['SECRET_KEY'] = 'secret'
 
+# getting the connection of socket
 socketio = SocketIO(app)
 
 @app.route('/')
@@ -18,6 +19,7 @@ def index():
 
 @socketio.on('message')
 def handleMessage(msg):
+    """Manage the connection with the client."""
     print(f'Message: {msg}')
 
     # sending the message of the client of the others clients
@@ -26,4 +28,5 @@ def handleMessage(msg):
 
 if __name__ == '__main__':
     # app.run(debug = True)
+    # running the app
     socketio.run(app)

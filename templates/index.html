@@ -28,6 +28,7 @@
     // recibiendo los datos y mostrandolos en el html, atravez de las etiquetas ul y agregamos
     // las etiquetas <li></li>
     socket.on('message', function (msg) {
+      // adding the elements
       $('#messages').append('<li>' + msg + '</li>')
     });
 
