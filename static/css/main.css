@@ -1,8 +1,11 @@
+/*
+  This is the style for the principal page
+*/
+
 html, body {
   padding:0;
   margin:0;
 }
-
 
 body {
   background: blue;
